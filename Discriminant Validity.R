@@ -5,6 +5,8 @@ disc.val.table <- function(fit) {
     return(sq.corr)
 }
 
+
+##An example
 library(lavaan)
 HS.model <- ' visual  =~ x1 + x2 + x3
 textual =~ x4 + x5 + x6
@@ -20,5 +22,7 @@ disc.table[upper.tri(disc.table)]<-""
 disc.table<-as.data.frame(disc.table)
 disc.table
 
+
+#Output 
 library(kableExtra)
 kable(disc.table) %>% kable_styling()
