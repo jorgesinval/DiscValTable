@@ -1,7 +1,7 @@
 disc.val.table <- function(fit) {
   sq.corr=lavaan::inspect(fit,"std")$psi^2
   ave=semTools::reliability(fit)
-  diag(sq.corr) <- round(unname(ave["avevar",1:length((abs(1-nrow(ave))))]),2)
+  diag(sq.corr) <- round(unname(ave["avevar",1:(ncol(ave)-1)]),2)
     return(sq.corr)
 }
 
