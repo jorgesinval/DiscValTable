@@ -17,7 +17,7 @@ fit <- cfa(HS.model, data=HolzingerSwineford1939)
 disc.table=disc.val.table(fit)
 disc.table=round(disc.table,2)
 
-disc.table<-disc.table
+disc.table<-disc.table 
 disc.table[upper.tri(disc.table)]<-""
 disc.table<-as.data.frame(disc.table)
 disc.table
